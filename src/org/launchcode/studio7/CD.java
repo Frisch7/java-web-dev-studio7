@@ -1,10 +1,18 @@
 package org.launchcode.studio7;
 
-public class CD {
+public class CD extends BaseDisc{
+    public CD() {
+        super();
+    }
 
-    // TODO: Implement your custom interface.
+    public CD(int minRPM, int maxRPM) {
+        super(minRPM, maxRPM);
+    }
 
-    // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-    //  need to be declared separately.
+    @Override
+    public void spinDisc() {
+        System.out.println("A CD spins at a rate of " + getMinRPM() + " - " + getMaxRPM() + " RPM");
+    }
+
 
 }
